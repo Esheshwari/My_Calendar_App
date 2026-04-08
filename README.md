@@ -94,7 +94,11 @@ calendar-app/
 
 ## Deployment
 
-This app is configured for deployment on Vercel. The `vercel.json` file contains the necessary build settings.
+This app is configured for deployment on Vercel - https://my-calendar-app-mmol.vercel.app
+
+## Demo Video
+
+https://youtu.be/Dv-RCWt2Jhc
 
 ## License
 
