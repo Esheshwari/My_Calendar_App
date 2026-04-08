@@ -1,6 +1,6 @@
 # TakeUForward Calendar
 
-A Simple-to-use interactive wall calendar application built with Next.js, featuring date range selection, notes, holiday markers, and responsive design.
+A responsive and interactive calendar web application built with Next.js, featuring date range selection, note management, holiday indicators, and a clean, user-friendly UI.
 
 ## Features
 
