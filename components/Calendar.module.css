@@ -1,0 +1,860 @@
+.pageWrapper {
+  min-height: 100vh;
+  padding: 32px 20px;
+  background: radial-gradient(circle at top, rgba(248, 216, 167, 0.25), transparent 40%),
+    linear-gradient(135deg, #f5ebd3 0%, #ffffff 46%, #f1f0f6 100%);
+}
+
+.container {
+  max-width: 1180px;
+  margin: auto;
+}
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.78);
+  border-radius: 22px;
+  box-shadow: 0 16px 36px rgba(92, 67, 46, 0.08);
+}
+
+.appBrand {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #6a3f19;
+}
+
+.bindingRow {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: -18px;
+  z-index: 2;
+}
+
+.bindingRing {
+  width: 18px;
+  height: 14px;
+  border-radius: 0 0 14px 14px;
+  background: linear-gradient(180deg, #e4d8c5 0%, #b99c7b 100%);
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.calendarShell {
+  background: linear-gradient(180deg, #fcfcfc 0%, #f2efe8 100%);
+  border: 1px solid rgba(180, 156, 116, 0.22);
+  border-radius: 34px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(280px, 1.1fr) minmax(320px, 1fr);
+  gap: 28px;
+  box-shadow: 0 24px 80px rgba(54, 45, 28, 0.12);
+  position: relative;
+}
+
+.heroPanel,
+.bodyPanel {
+  padding: 26px;
+}
+
+.heroPanel {
+  background: linear-gradient(180deg, #fff9f1 0%, #fbf6ec 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.heroHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.tag {
+  margin: 0 0 6px;
+  font-size: 0.86rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #9f7246;
+}
+
+.heroTitle {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1;
+  font-weight: 700;
+  color: #463727;
+}
+
+.heroSubtitle {
+  margin: 0;
+  color: #7c6a55;
+  font-size: 1rem;
+}
+
+.themeToggle {
+  background: #44321f;
+  color: #f7efe3;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 12px 22px;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  box-shadow: 0 14px 32px rgba(68, 50, 29, 0.12);
+}
+
+.themeToggle:hover {
+  transform: translateY(-1px);
+  background: #5b4328;
+}
+
+.heroImage {
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
+  border-radius: 26px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+}
+
+.heroImageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(40, 24, 12, 0.26), rgba(24, 15, 9, 0.58));
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+}
+
+.heroImageLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.heroImageDate {
+  display: block;
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.2rem;
+}
+
+.heroImg {
+  object-fit: cover;
+  transform: scale(1.08);
+  filter: saturate(1.14);
+  transition: transform 0.7s ease;
+}
+
+.heroImage:hover .heroImg {
+  transform: scale(1.12);
+}
+
+.heroNotes {
+  padding: 18px 14px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 30px rgba(136, 115, 81, 0.08);
+}
+
+.heroNotesTitle {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  color: #4c3929;
+}
+
+.heroNotesText {
+  margin: 0;
+  color: #6b5b45;
+  line-height: 1.75;
+}
+
+.controlsBar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.navButtons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.navButtons button,
+.saveButton,
+.clearButton,
+.monthMemoButton {
+  border: none;
+  border-radius: 18px;
+  padding: 14px 20px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navButtons button:hover,
+.saveButton:hover,
+.clearButton:hover,
+.monthMemoButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(68, 50, 28, 0.14);
+}
+
+.navButtons button {
+  background: #ffffff;
+  color: #5c4939;
+  box-shadow: 0 8px 22px rgba(146, 112, 76, 0.14);
+}
+
+.primaryButton {
+  background: #f7ede0;
+  color: #6d5136;
+}
+
+.buttonIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+.saveButton {
+  background: #7b5b37;
+  color: #fff;
+  box-shadow: 0 16px 36px rgba(88, 63, 36, 0.18);
+}
+
+.holidayButton {
+  background: #d1443d;
+  color: #fff;
+  box-shadow: 0 16px 36px rgba(209, 68, 61, 0.18);
+}
+
+.monthMemoButton {
+  background: #f2e6d9;
+  color: #5a4228;
+}
+
+.clearButton {
+  background: #fff7ee;
+  color: #6a4a2f;
+  box-shadow: 0 12px 28px rgba(120, 87, 53, 0.12);
+}
+
+.summaryCard {
+  background: linear-gradient(135deg, #fffdfa, #f7ede0);
+  border-radius: 22px;
+  padding: 16px 20px;
+  box-shadow: inset 0 0 0 1px rgba(193, 156, 110, 0.12);
+  min-width: 240px;
+}
+
+.summaryCard span {
+  display: block;
+  font-size: 0.85rem;
+  color: #8b7a65;
+  margin-bottom: 6px;
+}
+
+.summaryCard strong {
+  display: block;
+  font-size: 0.98rem;
+  line-height: 1.4;
+  color: #4a3627;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(42px, 1fr));
+  gap: 12px;
+}
+
+.weekdayLabel {
+  font-size: 0.82rem;
+  color: #7b6551;
+  text-align: center;
+  font-weight: 700;
+}
+
+.emptyCell {
+  min-height: 62px;
+}
+
+.prevMonthCell,
+.nextMonthCell {
+  min-height: 62px;
+  color: #999;
+  opacity: 0.6;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.day {
+  min-height: 62px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+  color: #3d2f24;
+  cursor: pointer;
+  position: relative;
+  perspective: 900px;
+  box-shadow: inset 0 0 0 1px rgba(169, 141, 109, 0.16);
+}
+
+.day:hover .dayCard {
+  transform: rotateY(180deg);
+}
+
+.dayCard {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  transition: transform 0.45s ease;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.dayCardFace,
+.dayCardBack {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  backface-visibility: hidden;
+  padding: 12px;
+}
+
+.dayCardFace {
+  background: rgba(255, 255, 255, 0.92);
+  color: #3d2f24;
+  z-index: 2;
+}
+
+.dayCardBack {
+  background: rgba(61, 39, 29, 0.96);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.dark .dayCardFace {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f1ebe0;
+}
+
+.dark .dayCardBack {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f1ebe0;
+}
+
+.dayBadge {
+  margin-top: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.holidayPill {
+  margin-top: 10px;
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(209, 68, 61, 0.14);
+  color: #a63d36;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.legendBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 14px;
+  color: #5c4939;
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(193, 156, 110, 0.16);
+  font-size: 0.9rem;
+}
+
+.legendDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.legendHoliday {
+  background: #d1443d;
+}
+
+.legendNote {
+  background: #4c7c4f;
+}
+
+.dot {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4c7c4f;
+}
+
+.dark .dot {
+  background: #6c9c6f;
+}
+
+.day:hover {
+  transform: translateY(-2px);
+}
+
+.selected {
+  background: linear-gradient(135deg, #c97f3f 0%, #a15e2d 100%);
+  color: white;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.32), 0 22px 40px rgba(142, 88, 47, 0.32);
+  animation: pulseGlow 2.2s ease-in-out infinite;
+}
+
+.selected::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 20px;
+  box-shadow: 0 0 24px rgba(255, 207, 147, 0.55);
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+}
+
+.range {
+  background: rgba(255, 208, 156, 0.38);
+}
+
+.holiday {
+  background: #d1443d;
+}
+
+.start,
+.end {
+  background: linear-gradient(135deg, #d29a57 0%, #8f6332 100%);
+  color: white;
+}
+
+.hasNote::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d1443d;
+  bottom: 10px;
+  right: 10px;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.65);
+}
+
+.noteSection {
+  margin-top: 28px;
+  display: grid;
+  gap: 18px;
+}
+
+.noteHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.noteLabel {
+  margin: 0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #a47d4d;
+}
+
+.noteTitle {
+  margin: 6px 0 0;
+  font-size: 1.28rem;
+  color: #3d2f24;
+}
+
+.clearButton {
+  background: #fff0e2;
+  color: #7f5d3a;
+  box-shadow: 0 10px 24px rgba(146, 103, 51, 0.12);
+}
+
+.noteInput,
+.monthMemoInput {
+  width: 100%;
+  min-height: 120px;
+  border-radius: 24px;
+  border: 1px solid rgba(156, 120, 84, 0.22);
+  padding: 18px 20px;
+  font-size: 1rem;
+  color: #40342b;
+  background: rgba(255, 255, 255, 0.95);
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.noteInput:focus,
+.monthMemoInput:focus {
+  border-color: #b68a5b;
+  box-shadow: 0 0 0 4px rgba(217, 170, 121, 0.16);
+}
+
+.noteActions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.saveButton {
+  background: #44321f;
+  color: white;
+}
+
+.saveButton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.monthMemoButton {
+  background: #f7ede0;
+  color: #6d5136;
+}
+
+.monthMemoSection {
+  display: grid;
+  gap: 12px;
+}
+
+.memoLabel {
+  color: #8d7052;
+  font-size: 0.95rem;
+}
+
+.holidayNotice {
+  margin-top: 10px;
+  color: #a63d36;
+  font-size: 0.93rem;
+  font-weight: 600;
+}
+
+.savedNotesPanel {
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 24px;
+  padding: 18px 20px;
+  box-shadow: inset 0 0 0 1px rgba(171, 136, 98, 0.12);
+}
+
+.savedNotesPanel h3 {
+  margin: 0 0 12px;
+  color: #4b3b2f;
+}
+
+.savedNotesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.savedNotesList li {
+  border-radius: 18px;
+  padding: 14px 16px;
+  background: #fffaf2;
+  border: 1px solid rgba(191, 157, 108, 0.18);
+}
+
+.savedNotesList strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: #5c4531;
+}
+
+.savedNotesList p {
+  margin: 0;
+  color: #6f5d4a;
+  line-height: 1.6;
+}
+
+.savedNotesEmpty {
+  margin: 0;
+  color: #8d7a6b;
+}
+
+.dark {
+  background: radial-gradient(circle at top, rgba(97, 76, 46, 0.24), transparent 30%),
+    linear-gradient(135deg, #11110f 0%, #1f1c18 48%, #332c22 100%);
+}
+
+.dark .calendarShell {
+  background: linear-gradient(180deg, #1b1a16 0%, #2e2a24 100%);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .heroPanel,
+.dark .bodyPanel,
+.dark .savedNotesPanel {
+  background: rgba(19, 17, 15, 0.96);
+}
+
+.dark .pageHeader,
+.dark .heroHeader,
+.dark .noteHeader,
+.dark .summaryCard,
+.dark .heroNotes {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.dark .heroTitle,
+.dark .heroSubtitle,
+.dark .heroNotesTitle,
+.dark .heroNotesText,
+.dark .summaryCard strong,
+.dark .noteTitle,
+.dark .noteLabel,
+.dark .memoLabel,
+.dark .savedNotesPanel h3,
+.dark .savedNotesList strong,
+.dark .savedNotesList p,
+.dark .savedNotesEmpty,
+.dark .weekdayLabel,
+.dark .day,
+.dark .appBrand {
+  color: #f1ebe0;
+}
+
+.dark .themeToggle {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f1ebe0;
+}
+
+.dark .day {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .start,
+.dark .end,
+.dark .selected {
+  background: linear-gradient(135deg, #a87541 0%, #dbaa6d 100%);
+}
+
+.dark .noteInput,
+.dark .monthMemoInput {
+  background: rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+.dark .navButtons button,
+.dark .saveButton,
+.dark .clearButton,
+.dark .monthMemoButton {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f7ede0;
+}
+
+.dark .primaryButton {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f7ede0;
+}
+
+.dark .saveButton {
+  background: #9f7c57;
+}
+
+.dark .holidayButton {
+  background: #b33a33;
+}
+
+.dark .monthMemoButton {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark .clearButton {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .calendarContainer {
+    padding: 16px;
+    gap: 20px;
+  }
+
+  .heroSection {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .heroTitle {
+    font-size: 24px;
+  }
+
+  .heroSubtitle {
+    font-size: 14px;
+  }
+
+  .calendarGrid {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+  }
+
+  .day {
+    min-height: 48px;
+    font-size: 14px;
+  }
+
+  .prevMonthCell,
+  .nextMonthCell {
+    min-height: 48px;
+    font-size: 12px;
+  }
+
+  .weekdayLabel {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+
+  .navButtons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .primaryButton {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .summaryCard {
+    font-size: 14px;
+  }
+
+  .noteSection {
+    gap: 12px;
+  }
+
+  .noteInput {
+    font-size: 14px;
+  }
+
+  .noteActions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .legendBar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+.fade {
+  animation: fadeIn 0.36s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.18;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 980px) {
+  .calendarShell {
+    grid-template-columns: 1fr;
+  }
+
+  .heroPanel,
+  .bodyPanel {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 680px) {
+  .pageWrapper {
+    padding: 22px 14px;
+  }
+
+  .heroHeader {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .controlsBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .summaryCard {
+    width: 100%;
+  }
+
+  .calendarGrid {
+    gap: 10px;
+  }
+
+  .day {
+    min-height: 54px;
+  }
+}
