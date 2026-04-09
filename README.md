@@ -94,11 +94,16 @@ calendar-app/
 
 ## Deployment
 
-This app is configured for deployment on Vercel - https://my-calendar-app-mmol.vercel.app
+This app is configured for deployment on Vercel - https://my-calendar-app-mmol.vercel.app - Desktop view
+
+
+https://github.com/user-attachments/assets/e91a6bf8-86ca-4eb1-b877-8a53d5a5c444 - mobile view
+
+
 
 ## Demo Video
 
-https://youtu.be/Dv-RCWt2Jhc
+[https://youtu.be/Dv-RCWt2Jhc](https://youtu.be/heuBidknZ-I)
 
 ## License
 
